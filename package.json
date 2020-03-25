@@ -1,10 +1,10 @@
 {
-  "name": "public-gcal",
+  "name": "public-gcal-fetch",
   "version": "0.2.0",
-  "description": "Fetch events from a public Google Calendar and return them in simplified JSON format",
+  "description": "Fetch events from a public Google Calendar and return them in simplified JSON format; uses fetch api to support react-native and expo; fork of Espesen/public-gcal",
   "repository": {
     "type": "git",
-    "url": "https://github.com/Espesen/public-gcal"
+    "url": "https://github.com/realToadtoad/public-gcal-fetch"
   },
   "main": "index.js",
   "scripts": {
@@ -23,6 +23,5 @@
     "sinon": "^1.17.6"
   },
   "dependencies": {
-    "request": "^2.79.0"
   }
 }
