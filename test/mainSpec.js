@@ -1,3 +1,4 @@
+/*
 var PublicGcal = require('../index.js')
   , API_key = require('./API_key.js')
   , request = require('request')
@@ -264,3 +265,4 @@ describe('constructor PublicGcal', function () {
   });
 
 });
+//*/
