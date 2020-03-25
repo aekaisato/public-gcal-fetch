@@ -1,15 +1,15 @@
-# public-gcal
+# public-gcal-fetch
 
-Get events from a public Google Calendar.
+Fetch events from a public Google Calendar and return them in simplified JSON format; uses fetch api to support react-native and expo; fork of Espesen/public-gcal
 
 Install:
 ```
-npm install public-gcal
+npm install public-gcal-fetch
 ```
 
 Usage example:
 ```
-var PublicGcal = require('public-gcal')
+var PublicGcal = require('public-gcal-fetch')
   , API_key = 'your_api_key_here' (get one in Google developer console)
   , calendarID = 'public_calendar_id_here';
 
