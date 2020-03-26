@@ -1,6 +1,6 @@
 {
   "name": "public-gcal-fetch",
-  "version": "0.3.1",
+  "version": "0.3.2",
   "description": "Fetch events from a public Google Calendar and return them in simplified JSON format; uses fetch api to support react-native and expo; fork of Espesen/public-gcal",
   "repository": {
     "type": "git",
@@ -20,5 +20,15 @@
     "sinon": "^1.17.6"
   },
   "dependencies": {
-  }
+  },
+  "keywords": [
+    "google-calendar",
+    "google",
+    "calendar",
+    "json",
+    "fetch",
+    "expo",
+    "react-native",
+    "react"
+  ]
 }
