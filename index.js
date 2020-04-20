@@ -18,12 +18,7 @@ function PublicGcal(options) {
   this.calendarId = options.calendarId;
 }
 
-PublicGcal.prototype.getEvents = async function(options, callback) {
-  if (!callback) {
-    callback = options;
-    options = {};
-  }
-
+PublicGcal.prototype.getEvents = async function (options, callback) {
   // thanks to user RichardLitt for following code
 
   options.singleEvents =
@@ -87,10 +82,10 @@ PublicGcal.prototype.getEvents = async function(options, callback) {
       url = url + "&orderBy=" + options.orderBy;
     }
   }
-console.log(url)
+  console.log(url);
   var gcalOutput = await fetch(url);
-
-  return events = await gcalOutput.items;
+  gcalOutput = await gcalOutput.json();
+  return await gcalOutput.items;
 
   //original code
   /*
@@ -124,6 +119,5 @@ console.log(url)
   });
 //*/
 };
-
 
 module.exports = PublicGcal;
