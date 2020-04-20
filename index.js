@@ -87,34 +87,10 @@ PublicGcal.prototype.getEvents = async function(options, callback) {
       url = url + "&orderBy=" + options.orderBy;
     }
   }
+console.log(url)
+  var gcalOutput = await fetch(url);
 
-  var gcalOutput = await fetch(url)
-    .then(function(response) {
-      if (!response.ok) {
-        throw Error(response.statusText);
-      }
-    })
-    .then(response => response.json());
-
-  if ("error" in gcalOutput) {
-    return callback(
-      new Error("Error from Google: " + JSON.stringify(data.error.errors))
-    );
-  }
-
-  var events = data.items;
-
-  result = events.filter(function (item) {
-    return item.status && !item.status.match(/cancelled/i);
-  }).map(function (item) {
-    return {
-      summary: item.summary,
-      description: item.description ? item.description : '',
-      location: item.location ? item.location : '',
-      start: item.start,
-      end: item.end
-    };
-  });
+  return events = await gcalOutput.items;
 
   //original code
   /*
@@ -148,5 +124,6 @@ PublicGcal.prototype.getEvents = async function(options, callback) {
   });
 //*/
 };
+
 
 module.exports = PublicGcal;
